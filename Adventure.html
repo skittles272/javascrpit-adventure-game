@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+JavaScript Adventure 
+<body>
+    <script>
+        var inventory = {
+            goldkey:0,
+        }
+        document.write("<h1 Style='color:#BA5B67'>Adventure Game 1.0 </h1>");
+        Bridgeofdeath();
+        function Bridgeofdeath(){
+        alert("STOP!");
+        alert("He who would cross the bridge of death"); 
+        alert("Must answer me, these questions three.");
+        alert("Ere the other side he see");
+        var  playername = prompt("What... is your name?");
+        var  quest = prompt("What... is your quest?");
+        var  assyria = prompt("What... is the capital of assyria").toLowerCase();
+            
+        if(assyria == "assur"){
+            Win();
+        }
+        else if(assyria == "dur-sharrukin"){
+            Win();
+        }
+        else if(assyria == "ekallatum"){
+            Win();
+        }
+        else if(assyria == "harran"){
+            Win();
+        }
+        else if(assyria == "carchemish"){
+            Win();
+        }
+        else if(assyria == "tell leilan"){
+            Win();
+        }
+        else if(assyria == "kar-tukulti-ninurta"){
+            Win();
+        }
+        else{
+            Start();
+        }
+        }
+        function Start(){
+        var startgame = confirm("Are you ready to begin");
+        
+            if(startgame){
+                Mansion();
+            }
+            else{
+                alert("goodbye");
+            }
+        }
+        function Mansion(){
+        var  beginAdv = prompt("You are a renowned detective. You have been asked to investigate a mysterious mansion in which many people have reported screams and loud noises. You promptly drive to the mansion. Once you arrive you decide to enter, once you enter you are greeted with the slamming and locking of the doors and windows you decide to go in one of the cardinal directions where do you go.").toLowerCase();
+        
+            if(beginAdv == "west"){
+                Westwing();
+            }
+            else if(beginAdv == "east"){
+            
+            }
+            
+            else if(beginAdv == "north"){
+            
+            }
+        
+            else if(beginAdv == "south"){
+                Leave();
+            }
+        
+            else if(beginAdv == "weast"){
+            var end = prompt("Shut up, Robert.")
+            Mansion();                                                                                                                                                                      
+            }
+            else{
+                alert("Thats not a cardinal direction.");
+                Mansion();
+            }
+        }
+        function Westwing(){
+            var westwing = prompt("The west wing is the smallest wing of the mansion books line every wall and there are two rooms. You may 'pull books' (in hopes for a secret passage way), or 'enter rooms'.")
+            
+            if(westwing == "pull books"){
+                alert("good job you just ripped all the books of the walls and not a single thing happened, someone has to clean this up you know. You decide to enter the one of the rooms now.") 
+                Westwingrooms();
+                }
+             else if(westwing == "enter rooms"){
+                Westwingrooms();
+             }
+            else{
+                alert("That was not an option.")
+                Westwing();
+            }
+        }
+        function Westwingrooms(){
+            var westwingrooms = prompt("Left, Right, or leave")
+            
+            if(westwingrooms == "left"){
+                Westwingroomsleft();
+            }
+            else if(westwingrooms == "right"){
+                Westwingroomsright();
+            }
+            else if(westwingrooms == "leave"){
+                Mansion();
+            }
+            else{
+                alert("That was not an option.")
+                Westwingrooms();
+            }
+            }
+        function Westwingroomsleft(){
+            alert("You enter the left room and are greeted by a frog.");
+            alert("A frog with every admirable quality.");
+            alert("A frog you want to impress.");
+            
+            var westwingroomsleft = prompt("do you choose to 'stay' and admire the frog or 'leave' the room")
+            
+            if(westwingroomsleft == "stay"){
+                Westwingroomsleftfinal();
+            }
+            else if(westwingroomsleft == "leave"){
+                Westwingrooms();
+            }
+            else{
+                alert("That was not an option")
+            }
+        }
+        function Westwingroomsright(){
+            alert("you open the door and another set of doors is in front of you");
+            var doorcolor = prompt("each door corrisponds with a color of the rainbow ('red', 'orange', 'yellow', 'green', 'blue', 'purple'.) Which do you open")
+            alert("you reach for the door");
+            Coloreddoorloop();
+        }
+        function Coloreddoorloop(){
+            alert("opening the door you happen upon another set of rainbow colored doors")
+            var doorcolor = prompt("Which of the set of doors do you open ('red', 'orange', 'yellow', 'green', 'blue', 'purple'.)")
+            Coloreddoorloop();
+        }  
+        function Win(){
+            alert("GG!");
+        }
+        function Westwingroomsleftfinal(){
+            alert("You decide to stay and admire the frog!");
+            alert("This is an amazing frog");
+            alert("You stay here admiring the frog for a long time");
+            var goldkey = prompt("You decide it is time to leave and find the murderer, but you see a golden flicker. Do you chhose to 'investigate' or 'leave'.");
+            
+            if(goldkey == "investigate"){
+                alert("You investigate the flickering and find a gold key");
+                goldkey += 1;
+            }
+                
+                
+        }
+        function Leave(){
+            alert("Well you just left the building.")
+            alert("You go back to the county sherifs office without the murderer.")
+            alert("Your boss learns of this and he fires you.")
+            alert("You have nothing but this job.")
+            alert("You soon run out of food and money.")
+            alert("You're evicted from your apartment and you are now starving and on the streets.")
+            alert("After weeks of begging for pocket change you starve, die, and are eaten by stray cats.")
+        }
+    </script>
+</body>
+</html>
